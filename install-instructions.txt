@@ -9,14 +9,13 @@ sudo adduser xonstat
 # optionally saves match data as .json.gz files and 
 # optionally reformats and forwards the data to the XonStat python HTTP server
 
-# I am using Ubuntu 15.04 for this, with the wily/universe repository
-# On Ubuntu 14.04 installing npm caused problems with dependencies (node-gyp, ...)
-# but can be installed fine after manually installing node-gyp from wily/universe
+# I am using Ubuntu 15.10
 
 sudo apt-get install git              # eventually already installed
 sudo apt-get install nodejs           # eventually already installed
 sudo apt-get install npm              # eventually already installed 
-sudo ln -s /usr/bin/nodejs /usr/bin/node   # ignore error if there is already a "node" command
+sudo apt-get install nodejs-legacy
+sudo apt-get install libzmq-dev
 
 # as xonstat user
 cd ~
@@ -27,6 +26,7 @@ npm install graceful-fs
 npm install log4js
 npm install q
 npm install request
+npm install express
 mkdir ql-match-jsons
 
 # edit cfg.json for your server list. 
