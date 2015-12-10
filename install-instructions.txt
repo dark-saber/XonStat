@@ -15,7 +15,7 @@ sudo apt-get install git              # eventually already installed
 sudo apt-get install nodejs           # eventually already installed
 sudo apt-get install npm              # eventually already installed 
 sudo apt-get install nodejs-legacy
-sudo apt-get install libzmq-dev
+sudo apt-get install libzmq3-dev
 
 # as xonstat user
 cd ~
@@ -27,6 +27,7 @@ npm install log4js
 npm install q
 npm install request
 npm install express
+npm install body-parser
 mkdir ql-match-jsons
 
 # edit cfg.json for your server list. 
